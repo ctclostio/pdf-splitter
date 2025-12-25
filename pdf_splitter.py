@@ -216,12 +216,12 @@ def select_optimization_options() -> dict | None:
     btn_frame = tk.Frame(root)
     btn_frame.pack(pady=20)
 
-    optimize_btn = tk.Button(btn_frame, text="  Optimize  ", command=on_optimize,
-                              font=("Helvetica", 11), padx=20, pady=8, cursor="hand2")
+    optimize_btn = tk.Button(btn_frame, text="Optimize", command=on_optimize,
+                              font=("Segoe UI", 10), width=16, height=2, cursor="hand2")
     optimize_btn.pack(side="left", padx=10)
 
-    skip_btn = tk.Button(btn_frame, text="  Skip Optimization  ", command=on_skip,
-                          font=("Helvetica", 11), padx=20, pady=8, cursor="hand2")
+    skip_btn = tk.Button(btn_frame, text="Skip Optimization", command=on_skip,
+                          font=("Segoe UI", 10), width=18, height=2, cursor="hand2")
     skip_btn.pack(side="left", padx=10)
 
     root.mainloop()
@@ -273,12 +273,12 @@ def select_compression_method() -> tuple[str, str, str] | None:
     btn_frame = tk.Frame(root)
     btn_frame.pack(pady=15)
 
-    ok_btn = tk.Button(btn_frame, text="     OK     ", command=on_select,
-                        font=("Helvetica", 11), padx=20, pady=8, cursor="hand2")
+    ok_btn = tk.Button(btn_frame, text="OK", command=on_select,
+                        font=("Segoe UI", 10), width=12, height=2, cursor="hand2")
     ok_btn.pack(side="left", padx=10)
 
-    cancel_btn = tk.Button(btn_frame, text="   Cancel   ", command=on_cancel,
-                            font=("Helvetica", 11), padx=20, pady=8, cursor="hand2")
+    cancel_btn = tk.Button(btn_frame, text="Cancel", command=on_cancel,
+                            font=("Segoe UI", 10), width=12, height=2, cursor="hand2")
     cancel_btn.pack(side="left", padx=10)
 
     root.mainloop()

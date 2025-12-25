@@ -150,7 +150,7 @@ def select_optimization_options() -> dict | None:
     root.resizable(False, False)
 
     window_width = 520
-    window_height = 340
+    window_height = 400
     screen_width = root.winfo_screenwidth()
     screen_height = root.winfo_screenheight()
     x = (screen_width - window_width) // 2
@@ -214,15 +214,17 @@ def select_optimization_options() -> dict | None:
 
     # Buttons
     btn_frame = tk.Frame(root)
-    btn_frame.pack(pady=20)
+    btn_frame.pack(pady=30, fill="x")
 
     optimize_btn = tk.Button(btn_frame, text="Optimize", command=on_optimize,
-                              font=("Segoe UI", 10), width=16, height=2, cursor="hand2")
-    optimize_btn.pack(side="left", padx=10)
+                              font=("Segoe UI", 11, "bold"), width=16, height=2,
+                              relief="raised", borderwidth=3, cursor="hand2")
+    optimize_btn.pack(side="left", padx=20, expand=True)
 
     skip_btn = tk.Button(btn_frame, text="Skip Optimization", command=on_skip,
-                          font=("Segoe UI", 10), width=18, height=2, cursor="hand2")
-    skip_btn.pack(side="left", padx=10)
+                          font=("Segoe UI", 11), width=18, height=2,
+                          relief="raised", borderwidth=3, cursor="hand2")
+    skip_btn.pack(side="left", padx=20, expand=True)
 
     root.mainloop()
     return result[0]
@@ -247,8 +249,8 @@ def select_compression_method() -> tuple[str, str, str] | None:
     root.attributes('-topmost', True)
     root.resizable(False, False)
 
-    window_width = 500
-    window_height = 200
+    window_width = 520
+    window_height = 250
     screen_width = root.winfo_screenwidth()
     screen_height = root.winfo_screenheight()
     x = (screen_width - window_width) // 2
@@ -271,15 +273,17 @@ def select_compression_method() -> tuple[str, str, str] | None:
     combo.current(default_idx)
 
     btn_frame = tk.Frame(root)
-    btn_frame.pack(pady=15)
+    btn_frame.pack(pady=25, fill="x")
 
     ok_btn = tk.Button(btn_frame, text="OK", command=on_select,
-                        font=("Segoe UI", 10), width=12, height=2, cursor="hand2")
-    ok_btn.pack(side="left", padx=10)
+                        font=("Segoe UI", 11, "bold"), width=14, height=2,
+                        relief="raised", borderwidth=3, cursor="hand2")
+    ok_btn.pack(side="left", padx=20, expand=True)
 
     cancel_btn = tk.Button(btn_frame, text="Cancel", command=on_cancel,
-                            font=("Segoe UI", 10), width=12, height=2, cursor="hand2")
-    cancel_btn.pack(side="left", padx=10)
+                            font=("Segoe UI", 11), width=14, height=2,
+                            relief="raised", borderwidth=3, cursor="hand2")
+    cancel_btn.pack(side="left", padx=20, expand=True)
 
     root.mainloop()
     return result[0]

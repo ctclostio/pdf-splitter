@@ -19,3 +19,6 @@ venv/
 .idea/
 *.swp
 *.swo
+
+# Test files (too large for GitHub)
+test_pdfs/

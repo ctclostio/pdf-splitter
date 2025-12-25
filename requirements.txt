@@ -1,1 +1,6 @@
 pypdf>=4.0.0
+
+# Optional compression libraries (install for more options)
+py7zr>=0.20.0      # 7-Zip support (best compression)
+zstandard>=0.21.0  # Zstandard support (best speed/ratio balance)
+lz4>=4.3.0         # LZ4 support (fastest)
